@@ -6,9 +6,18 @@ p=input("insersci un prodotto ")
 def prezzo_medio(g,p,prezzo_prodotti):
     x=0
     somma=0
+    sTot=0
     for prodotti,giorni,prezzi in prezzo_prodotti:
         if(prodotti==p):
             x+=1
             somma+=prezzi
-    print(somma)
+    if(x>0):
+        media=prezzi/x
+        return media
+    else:
+        return("articola non presente ")
+
+        
+
+   
 
